@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="/index.js"></script>
+    <title>Assignment 3</title>
+</head>
+<body>
+<!-- Your Code Goes Here -->
+<fieldset class="todo-list">
+    <legend class="todo-list__title">Add</legend>
+    <a id="addlink" href="/myForm">Add New Items</a>
+</fieldset>
+
+<div>
+    <fieldset class="todo-list">
+        <legend class="todo-list__title">Modification</legend>
+        <div class="tip">Enter the to-do item you want to update</div>
+        <input id="originalItem" type="text"/><br/>
+        <div class="tip">Enter the new name</div>
+        <input id="newItem" type="text"/><br/>
+        <input type="button" onclick="updateItem()" value="Update">
+    </fieldset>
+
+    <fieldset class="todo-list">
+        <legend class="todo-list__title">Deletion</legend>
+        <div class="tip">Enter the to-do item to delete</div>
+        <input id="itemToDelete" type="text"/><br/>
+        <input type="button" onclick="deleteItem()" value="Delete">
+    </fieldset>
+</div>
+
+<fieldset class="todo-list">
+    <legend class="todo-list__title">To-do List</legend>
+    <% items.map(function(item) { %>
+        <label class="todo-list__label" id="<%= item.id %>">
+            <input type="checkbox" name="" id=""/>
+            <i class="check"></i>
+            <span id="itemName<%= item.id %>"><%= item.name %></span>
+        </label>
+    <% }) %>
+
+</fieldset>
+
+</body>
+</html>
