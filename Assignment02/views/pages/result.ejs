@@ -7,7 +7,18 @@
     <title>Assignment 2</title>
 </head>
 <body>
-  <!-- Your Code Goes Here -->
-      
+    <fieldset class="todo-list">
+    <legend class="todo-list__title">Todo List</legend>
+
+<!--    loop through each item in the URL and build the list-->
+    <% items.forEach(function(item){%>
+    <label class="todo-list__label">
+        <input type="checkbox" name="" id="" />
+        <i class="check"></i>
+        <span><%=item %></span>
+    </label>
+    <% }) %>
+
+    </fieldset>
 </body>
 </html>
